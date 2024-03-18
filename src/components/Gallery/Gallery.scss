@@ -1,0 +1,33 @@
+#gallery {
+  background: rgba(236, 234, 227, 1);
+  .container {
+    position: relative;
+    .image-container {
+      display: block;
+      background: rgba(255, 255, 255, 0);
+      left: 0px;
+      top: 20px;
+      z-index: 34;
+      position: absolute;
+      img {
+        width: 250px;
+        height: 319px;
+      }
+    }
+    .gallery {
+      z-index: 35;
+      position: relative;
+      .card {
+        border-color: #fff;
+        .thumbnail {
+          padding: 15px;
+          .card-img-top {
+            border-bottom-left-radius: var(--bs-card-inner-border-radius);
+            border-bottom-right-radius: var(--bs-card-inner-border-radius);
+            border-color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
