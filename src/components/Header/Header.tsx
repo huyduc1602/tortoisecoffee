@@ -1,23 +1,25 @@
 import { useState } from 'react';
 import './Header.scss';
+import { Link } from 'react-scroll';
+
 
 function Header() {
   const menu = [
     {
       name: 'Home',
-      id: '#'
+      id: 'banner'
     },
     {
       name: 'About Us',
-      id: '#about-us'
+      id: 'about-us'
     },
     {
       name: 'Products',
-      id: '#products'
+      id: 'products'
     },
     {
       name: 'Contact',
-      id: '#footer'
+      id: 'footer'
     }
   ]
 
@@ -39,13 +41,22 @@ function Header() {
               const classMenuItem = "nav-link " + (active === item.id ? 'active' : '');
               return (
                 <li className="nav-item" key={key}>
-                  <a className={classMenuItem} aria-current="page" href={item.id} onClick={() => handleClickMenu(item.id)}>{item.name}</a>
+                  <Link
+                      activeClass="active"
+                      to={item.id}
+                      spy={true}
+                      smooth={true}
+                      offset={-70}
+                      duration={100}
+                  >
+                    {item.name}
+                  </Link>
                 </li>
               )
             })}
           </ul>
           <div className="d-flex">
-            <a className="btn btn-outline-success">Shop</a>
+            <a href="#products" className="btn btn-outline-success">Shop</a>
           </div>
         </div>
       </div>
