@@ -43,9 +43,9 @@ export default function Gallery() {
           <img src="http://d9hhrg4mnvzow.cloudfront.net/unbouncepages.com/coffeera/310756ba-shape-01-1_106y08v000000000000028.png" alt="coffee" />
         </div>
         <div className="gallery row px-5">
-          {gallery.map((item) => {
+          {gallery.map((item,key) => {
             return (
-              <div className="col-md-4 pb-3">
+              <div className="col-md-4 pb-3" key={key}>
                 <div className="card">
                   <div className="thumbnail">
                     <img src={item.image} className="card-img-top" alt={item.title} />

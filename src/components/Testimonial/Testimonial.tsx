@@ -27,8 +27,8 @@ export default function Testimonial() {
         <h4>Testimonial</h4>
         <h2>What Our Clients Says</h2>
         <div className="clients row">
-          {clients.map((client) => (
-            <div className="col-md-4 client">
+          {clients.map((client, key) => (
+            <div className="col-md-4 client pt-5" key={key}>
               <div className="avatar">
                 <img src={client.avatar} alt="avatar" />
               </div>

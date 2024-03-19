@@ -18,9 +18,9 @@ export default function FollowInstagram() {
         <h4>Follow Us Now</h4>
         <h2>Follow on Instagram</h2>
         <div className="gallery row px-5">
-          {images.map((image) => {
+          {images.map((image, key) => {
             return (
-              <div className="col-md-3 py-3">
+              <div className="col-md-3 py-3" key={key}>
                 <div className="card rounded-5">
                   <div className="thumbnail">
                     <img src={image} className="card-img" alt="Image Instagram" />

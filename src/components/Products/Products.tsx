@@ -47,20 +47,10 @@ export default function Products() {
         <h4>Special Online Shop</h4>
         <h2>Our Popular Products</h2>
         <div className="gallery row py-5">
-          {products.map((product,key) => {
+          {products.map((product, key) => {
             return (
-              <div className="col-md-4 pb-3">
-                <ProductItem key={key} name={product.name} image={product.image} description={product.description} price={product.price} />
-                {/* <div className="card">
-                  <div className="thumbnail rounded">
-                    <img src={product.image} className="card-img-top" alt={product.name} />
-                  </div>
-                  <div className="card-body">
-                    <h4>{product.name}</h4>
-                    <p className="card-text">{product.description}</p>
-                    <p className="card-text">${product.price}</p>
-                  </div>
-                </div> */}
+              <div className="col-md-4 pb-3" key={key}>
+                <ProductItem name={product.name} image={product.image} description={product.description} price={product.price} />
               </div>
             );
           })}

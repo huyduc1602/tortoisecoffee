@@ -18,3 +18,7 @@
     margin: 0;
     border: 0;
 }
+
+html {
+    scroll-behavior: smooth;
+}
