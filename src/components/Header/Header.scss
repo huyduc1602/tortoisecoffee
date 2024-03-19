@@ -1,15 +1,19 @@
 @use "~/styles/base/_colors.scss" as *;
+@use "~/styles/base/mixins" as *;
 
 .navbar {
-  background-color: $primary !important;
+  background-color: $bg-primary !important;
   padding-top: 20px;
   padding-bottom: 20px;
   a {
     display: block;
     padding: 0.5rem 1rem;
-    color: #0d6efd;
+    color: $primary !important;
     text-decoration: none;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+    transition:
+      color 0.15s ease-in-out,
+      background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out;
     cursor: pointer;
     color: white;
     padding-left: 15px !important;
@@ -39,7 +43,7 @@
       transform: translateY(10px);
     }
 
-    &.active{
+    &.active {
       color: white;
     }
 
@@ -50,6 +54,24 @@
       -webkit-transform: translateY(0px);
       -moz-transform: translateY(0px);
       transform: translateY(0px);
+    }
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+    display: none;
+
+    @include tablet-boostrap {
+      display: block;
+    }
+
+    &.mobile {
+      display: block;
+
+      @include tablet-boostrap {
+        display: none;
+      }
     }
   }
 }

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './Header.scss';
 import { Link } from 'react-scroll';
-
+import Logo from '~/assets/logo.png';
 
 function Header() {
   const menu = [
@@ -30,7 +30,7 @@ function Header() {
   }
 
   return (
-    <nav className="navbar fixed-top navbar-expand-lg bg-light">
+    <nav className="navbar fixed-top navbar-expand-lg bg-light shadow-lg">
       <div className="container">
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
@@ -56,9 +56,10 @@ function Header() {
             })}
           </ul>
           <div className="d-flex">
-            <a href="#products" className="btn btn-outline-success">Shop</a>
+            <img className="logo" src={Logo} alt="Tortoise coffee" />
           </div>
         </div>
+         <img className="logo mobile" src={Logo} alt="Tortoise coffee" />
       </div>
     </nav>
   );
