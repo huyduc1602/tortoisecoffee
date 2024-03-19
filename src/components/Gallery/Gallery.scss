@@ -1,5 +1,7 @@
+@use "~/styles/base/_colors.scss" as *;
+
 #gallery {
-  background: rgba(236, 234, 227, 1);
+  background: $bg-primary;
   .container {
     position: relative;
     .image-container {

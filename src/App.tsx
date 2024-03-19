@@ -6,6 +6,8 @@ import AboutUs from '~/components/AboutUs/AboutUs';
 import Gallery from '~/components/Gallery/Gallery';
 import Footer from '~/components/Footer/Footer';
 import Testimonial from '~/components/Testimonial/Testimonial';
+import Products from '~/components/Products/Products';
+import FollowInstagram from '~/components/FollowInstagram/FollowInstagram';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <AboutUs />
       <Gallery />
       <Testimonial />
+      <Products />
+      <FollowInstagram />
       <Footer />
     </>
   )
