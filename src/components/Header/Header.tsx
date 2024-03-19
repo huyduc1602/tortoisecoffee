@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './Header.scss';
 import { Link } from 'react-scroll';
 import Logo from '~/assets/logo.png';
@@ -23,12 +22,6 @@ function Header() {
     }
   ]
 
-  const [active, setActive] = useState(menu[0].id);
-
-  const handleClickMenu = (id: string) => {
-    setActive(id);
-  }
-
   return (
     <nav className="navbar fixed-top navbar-expand-lg bg-light shadow-lg">
       <div className="container">
@@ -38,7 +31,6 @@ function Header() {
         <div className="collapse navbar-collapse" id="navbarToggler">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             {menu.map((item, key) => {
-              const classMenuItem = "nav-link " + (active === item.id ? 'active' : '');
               return (
                 <li className="nav-item" key={key}>
                   <Link
