@@ -4,6 +4,11 @@
   background: $bg-primary;
   .container {
     position: relative;
+
+    h4, h2{
+      z-index: 35;
+    }
+    
     .image-container {
       display: block;
       background: rgba(255, 255, 255, 0);
