@@ -37,18 +37,18 @@ export default function Gallery() {
   return (
     <section id="gallery" className="gallery-container py-5">
       <div className="container text-center py-5">
-        <h4>Our Special Menu</h4>
-        <h2>Photo Gallery</h2>
+        <h4 data-aos="fade-down">Our Special Menu</h4>
+        <h2 data-aos="fade-down">Photo Gallery</h2>
         <div className="image-container">
           <img src="http://d9hhrg4mnvzow.cloudfront.net/unbouncepages.com/coffeera/310756ba-shape-01-1_106y08v000000000000028.png" alt="coffee" />
         </div>
         <div className="gallery row px-5">
           {gallery.map((item,key) => {
             return (
-              <div className="col-md-4 pb-3" key={key}>
+              <div className="col-md-4 pb-3" key={key} data-aos="flip-up">
                 <div className="card">
                   <div className="thumbnail">
-                    <img src={item.image} className="card-img-top" alt={item.title} />
+                    <img loading="lazy" src={item.image} className="card-img-top" alt={item.title} />
                   </div>
                   <div className="card-body">
                     <h4>{item.title}</h4>

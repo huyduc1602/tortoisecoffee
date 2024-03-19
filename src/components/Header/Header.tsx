@@ -1,6 +1,31 @@
+import { useState } from 'react';
 import './Header.scss';
 
 function Header() {
+  const menu = [
+    {
+      name: 'Home',
+      id: '#'
+    },
+    {
+      name: 'About Us',
+      id: '#about-us'
+    },
+    {
+      name: 'Products',
+      id: '#products'
+    },
+    {
+      name: 'Contact',
+      id: '#footer'
+    }
+  ]
+
+  const [active, setActive] = useState(menu[0].id);
+
+  const handleClickMenu = (id: string) => {
+    setActive(id);
+  }
 
   return (
     <nav className="navbar fixed-top navbar-expand-lg bg-light">
@@ -10,18 +35,14 @@ function Header() {
         </button>
         <div className="collapse navbar-collapse" id="navbarToggler">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#about-us">About Us</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#products">Product</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#footer">Contact</a>
-            </li>
+            {menu.map((item, key) => {
+              const classMenuItem = "nav-link " + (active === item.id ? 'active' : '');
+              return (
+                <li className="nav-item" key={key}>
+                  <a className={classMenuItem} aria-current="page" href={item.id} onClick={() => handleClickMenu(item.id)}>{item.name}</a>
+                </li>
+              )
+            })}
           </ul>
           <div className="d-flex">
             <a className="btn btn-outline-success">Shop</a>

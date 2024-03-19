@@ -7,7 +7,7 @@ export default function ProductItem({ name, image, description, price }: PropsPr
     <article className="product">
       <div className="product-wrapper">
         <figure>
-          <img src={image} alt="" />
+          <img loading="lazy" src={image} alt={name} />
         </figure>
         <div className="product-body">
           <h2>{name}</h2>

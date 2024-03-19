@@ -49,7 +49,8 @@ export default function Products() {
         <div className="gallery row py-5">
           {products.map((product, key) => {
             return (
-              <div className="col-md-4 pb-3" key={key}>
+              <div className="col-md-4 pb-4" key={key} data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom">
                 <ProductItem name={product.name} image={product.image} description={product.description} price={product.price} />
               </div>
             );

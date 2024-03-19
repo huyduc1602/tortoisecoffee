@@ -1,4 +1,14 @@
-@use '~/styles/base/_colors.scss' as *;
+@use "~/styles/base/_colors.scss" as *;
+@use "~/styles/base/mixins" as *;
+
 #footer {
   background-color: $primary;
+
+  .contact {
+    .col-md-6 {
+      @include mobile {
+        width: inherit;
+      }
+    }
+  }
 }

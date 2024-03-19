@@ -20,10 +20,10 @@ export default function FollowInstagram() {
         <div className="gallery row px-5">
           {images.map((image, key) => {
             return (
-              <div className="col-md-3 py-3" key={key}>
+              <div className="col-md-3 py-3" key={key} data-aos="flip-left">
                 <div className="card rounded-5">
                   <div className="thumbnail">
-                    <img src={image} className="card-img" alt="Image Instagram" />
+                    <img loading="lazy" src={image} className="card-img" alt="Image Instagram" />
                   </div>
                 </div>
               </div>
