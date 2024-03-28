@@ -1,13 +1,18 @@
 @use "~/styles/base/_colors.scss" as *;
 @use "~/styles/base/mixins" as *;
 
-#footer {
+#contact {
   background-color: $primary;
 
   .contact {
     .col-md-6 {
       @include mobile {
         width: inherit;
+      }
+      .socials {
+        img {
+          color: #fff;
+        }
       }
     }
   }

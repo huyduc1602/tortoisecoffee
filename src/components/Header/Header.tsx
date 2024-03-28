@@ -5,20 +5,24 @@ import Logo from '~/assets/logo.png';
 function Header() {
   const menu = [
     {
-      name: 'Home',
-      id: 'banner'
+      name: 'Trang chủ',
+      id: ''
     },
     {
-      name: 'About Us',
+      name: 'Về chúng tôi',
       id: 'about-us'
     },
     {
-      name: 'Products',
+      name: 'Sản phẩm',
       id: 'products'
     },
     {
-      name: 'Contact',
-      id: 'footer'
+      name: 'Tin tức',
+      id: 'blog'
+    },
+    {
+      name: 'Liên hệ',
+      id: 'contact'
     }
   ]
 
@@ -33,16 +37,7 @@ function Header() {
             {menu.map((item, key) => {
               return (
                 <li className="nav-item" key={key}>
-                  <Link
-                      activeClass="active"
-                      to={item.id}
-                      spy={true}
-                      smooth={true}
-                      offset={-70}
-                      duration={100}
-                  >
-                    {item.name}
-                  </Link>
+                  <a href={window.location.origin + '#' + item.id}>{item.name}</a>
                 </li>
               )
             })}
@@ -51,7 +46,7 @@ function Header() {
             <img className="logo" src={Logo} alt="Tortoise coffee" />
           </div>
         </div>
-         <img className="logo mobile" src={Logo} alt="Tortoise coffee" />
+        <img className="logo mobile" src={Logo} alt="Tortoise coffee" />
       </div>
     </nav>
   );

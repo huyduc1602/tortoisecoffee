@@ -1,12 +1,14 @@
 @use "~/styles/base/_colors.scss" as *;
 
-#gallery {
+#blog {
   background: $bg-primary;
   .container {
     position: relative;
 
     h4, h2{
       z-index: 35;
+      text-align: left;
+      position: relative;
     }
     
     .image-container {
@@ -21,18 +23,24 @@
         height: 319px;
       }
     }
-    .gallery {
+    .blog {
       z-index: 35;
       position: relative;
       .card {
-        border-color: #fff;
+        border-color: transparent;
+        background-color: transparent;
         .thumbnail {
           padding: 15px;
           .card-img-top {
             border-bottom-left-radius: var(--bs-card-inner-border-radius);
             border-bottom-right-radius: var(--bs-card-inner-border-radius);
             border-color: #fff;
+            width: 100%;
+            height: auto;
           }
+        }
+        .link{
+          color: $primary;
         }
       }
     }

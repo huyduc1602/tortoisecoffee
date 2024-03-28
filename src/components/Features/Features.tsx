@@ -1,23 +1,23 @@
 export default function Features() {
   const features = [
     {
-      title: "Awesomae Aroma",
-      description: "The coffee is brewed by first roasting the green coffee beans",
+      title: "Hương thơm tuyệt vời",
+      description: "Cà phê được pha bằng cách pha hạt cà phê xanh đầu tiên",
       image: "http://d9hhrg4mnvzow.cloudfront.net/unbouncepages.com/coffeera/fc140a9f-coffee-cup1_101y01y000000000000028.png"
     },
     {
-      title: "High Quality",
-      description: "The coffee is brewed by first roasting the green coffee beans",
+      title: "Chất lượng cao",
+      description: "Được tuyển chọn từ những hạt giống cà phê cao cấp nhất",
       image: "https://d9hhrg4mnvzow.cloudfront.net/unbouncepages.com/coffeera/e4daa532-quality1_101y01y000000000000028.png"
     },
     {
-      title: "Pure Grades",
-      description: "The coffee is brewed by first roasting the green coffee beans",
+      title: "Độ tinh khiết",
+      description: "Cà phê đảm bảo độ tinh khiết và không lẫn tạp chất",
       image: "http://d9hhrg4mnvzow.cloudfront.net/unbouncepages.com/coffeera/56512642-coffee-beans1_101y01y000000000000028.png"
     },
     {
-      title: "Proper Roasting",
-      description: "The coffee is brewed by first roasting the green coffee beans",
+      title: "Rang đúng cách",
+      description: "Quy trình rang hạt cà phê được nghiên cứu kĩ lưỡng",
       image: "http://d9hhrg4mnvzow.cloudfront.net/unbouncepages.com/coffeera/38361ca1-coffee1_101y01y000000000000028.png"
     }
   ];

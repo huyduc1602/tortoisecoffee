@@ -1,25 +1,30 @@
 import './App.scss'
 import Header from '~/components/Header/Header'
-import Banner from './components/Banner/Banner';
-import Features from '~/components/Features/Features';
-import AboutUs from '~/components/AboutUs/AboutUs';
-import Gallery from '~/components/Gallery/Gallery';
+import { blogs } from '~/data/blogs';
+import BlogDetail from '~/components/BlogDetail/BlogDetail';
 import Footer from '~/components/Footer/Footer';
-import Testimonial from '~/components/Testimonial/Testimonial';
-import Products from '~/components/Products/Products';
-import FollowInstagram from '~/components/FollowInstagram/FollowInstagram';
+import Home from '~/components/Home';
 
 function App() {
+
+  let pageContent = <>
+    <Home />
+  </>
+
+  const url = window.location.href;
+  const arrSlug = blogs.map(blog => window.location.origin + '/blog/' + blog.slug);
+
+  arrSlug.forEach(blogSlug => {
+    if (blogSlug === url){
+      let slug = url.substring(url.lastIndexOf('/') + 1);
+      pageContent = <BlogDetail slug={slug} />
+    }
+  });
+
   return (
     <>
       <Header />
-      <Banner />
-      <Features />
-      <AboutUs />
-      <Gallery />
-      <Testimonial />
-      <Products />
-      <FollowInstagram />
+      {pageContent}
       <Footer />
     </>
   )
