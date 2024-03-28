@@ -11,13 +11,15 @@ function App() {
     <Home />
   </>
 
-  const url = window.location.href;
-  const arrSlug = blogs.map(blog => window.location.origin + '/blog/' + blog.slug);
+  const url = window.location.search;
+  const urlParams = new URLSearchParams(url);
+  const blogParam = urlParams.get('blog')
+
+  const arrSlug = blogs.map(blog => blog.slug);
 
   arrSlug.forEach(blogSlug => {
-    if (blogSlug === url){
-      let slug = url.substring(url.lastIndexOf('/') + 1);
-      pageContent = <BlogDetail slug={slug} />
+    if (blogSlug === blogParam){
+      pageContent = <BlogDetail slug={blogSlug} />
     }
   });
 

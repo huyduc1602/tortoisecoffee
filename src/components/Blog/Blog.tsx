@@ -26,7 +26,7 @@ export default function Blog() {
                     <div className="col-md-10 float-left">
                       <div className="card-body">
                         <h4>
-                          <a className="link" href={window.location.origin + '/blog/'+item.slug}>{item.title}</a>
+                          <a className="link" href={window.location.origin + '/?blog='+item.slug}>{item.title}</a>
                         </h4>
                         <p className="card-text">{item.description}</p>
                       </div>

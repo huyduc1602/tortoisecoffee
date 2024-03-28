@@ -6,7 +6,6 @@ interface BlogDetail {
 }
 
 export default function BlogDetail({ slug }: BlogDetail) {
-  console.log('slug',slug);
   const blog:BlogType | undefined = blogs.find(item => item.slug === slug);
 
   return <section id="blog-detail" className="py-5">
