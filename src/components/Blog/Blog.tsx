@@ -9,13 +9,10 @@ export default function Blog() {
           Tin tức của chúng tôi
         </h4>
         <h2 data-aos="fade-down" className="text-center">Bài viết</h2>
-        <div className="image-container">
-          <img src="http://d9hhrg4mnvzow.cloudfront.net/unbouncepages.com/coffeera/310756ba-shape-01-1_106y08v000000000000028.png" alt="coffee" />
-        </div>
         <div className="blog row">
             {blogs.map((item: BlogType, key:number) => {
             return (
-              <div className="col-md-12 pb-3 px-0" key={key} data-aos="flip-up">
+              <div className="col-md-12 pb-3 px-2" key={key} data-aos="flip-up">
                 <div className="card">
                   <div className="row g-0">
                     <div className="col-md-2">

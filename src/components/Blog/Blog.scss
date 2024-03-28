@@ -1,7 +1,7 @@
 @use "~/styles/base/_colors.scss" as *;
 
 #blog {
-  background: $bg-primary;
+  background: #fff;
   .container {
     position: relative;
 
@@ -10,19 +10,7 @@
       text-align: left;
       position: relative;
     }
-    
-    .image-container {
-      display: block;
-      background: rgba(255, 255, 255, 0);
-      left: 0px;
-      top: 20px;
-      z-index: 34;
-      position: absolute;
-      img {
-        width: 250px;
-        height: 319px;
-      }
-    }
+  
     .blog {
       z-index: 35;
       position: relative;

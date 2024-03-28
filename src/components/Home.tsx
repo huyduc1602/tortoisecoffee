@@ -1,7 +1,7 @@
 import Banner from '~/components/Banner/Banner';
 import Features from '~/components/Features/Features';
 import AboutUs from '~/components/AboutUs/AboutUs';
-import Gallery from '~/components/Blog/Blog';
+import Blog from '~/components/Blog/Blog';
 import Products from '~/components/Products/Products';
 import { scroller } from 'react-scroll';
 import { useEffect } from 'react';
@@ -24,7 +24,7 @@ export default function Home(){
     <Banner />
     <Features />
     <AboutUs />
-    <Gallery />
     <Products />
+    <Blog />
   </>
 }

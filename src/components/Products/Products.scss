@@ -1,7 +1,7 @@
 @use "~/styles/base/_colors.scss" as *;
 
 #products {
-  background-color: #fff;
+  background-color: $bg-primary;
   .container {
     z-index: 35;
     position: relative;
