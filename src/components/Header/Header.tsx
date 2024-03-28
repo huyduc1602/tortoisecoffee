@@ -1,5 +1,4 @@
 import './Header.scss';
-import { Link } from 'react-scroll';
 import Logo from '~/assets/logo.png';
 
 function Header() {
